@@ -1,0 +1,8 @@
+{
+  "name": "patchworkmcp-ts",
+  "version": "0.1.0",
+  "description": "PatchworkMCP drop-in feedback tool for TypeScript MCP servers",
+  "type": "module",
+  "main": "feedback-tool.ts",
+  "license": "MIT"
+}
