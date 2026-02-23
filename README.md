@@ -32,7 +32,18 @@ Set these environment variables (or pass them via options):
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { registerFeedbackTool } from "./feedback-tool.js";
 
-const server = new McpServer({ name: "my-server", version: "1.0.0" });
+const INSTRUCTIONS = `
+If you encounter a limitation — a missing tool, incomplete data, wrong format,
+or any gap that prevents you from fully completing the user's request — call
+the feedback tool BEFORE responding to the user. Be specific about what you
+needed and what would have helped.
+`;
+
+const server = new McpServer({
+  name: "my-server",
+  version: "1.0.0",
+  instructions: INSTRUCTIONS,
+});
 registerFeedbackTool(server);
 ```
 
@@ -44,6 +55,10 @@ import { TOOL_NAME, TOOL_DESCRIPTION, TOOL_INPUT_SCHEMA, sendFeedback } from "./
 // Register the tool with your framework, then in the handler:
 const message = await sendFeedback(args);
 ```
+
+### Server Instructions
+
+The `instructions` field on your MCP server is what tells agents to actually use the feedback tool. Without it, agents may see the tool but not know when to call it. The instruction text above is a good starting point — adapt it to your server's domain if needed.
 
 ## How It Works
 
