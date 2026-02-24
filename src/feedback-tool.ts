@@ -186,7 +186,7 @@ export async function sendFeedback(
 ): Promise<string> {
   const url = options.patchworkUrl ?? PATCHWORK_URL;
   const key = options.apiKey ?? API_KEY;
-  const slug = options.serverSlug ?? SERVER_SLUG || "unknown";
+  const slug = options.serverSlug ?? (SERVER_SLUG || "unknown");
 
   const payload = {
     server_slug: slug,

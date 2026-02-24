@@ -1,8 +1,48 @@
 {
-  "name": "patchworkmcp-ts",
+  "name": "patchworkmcp",
   "version": "0.1.0",
   "description": "PatchworkMCP drop-in feedback tool for TypeScript MCP servers",
   "type": "module",
-  "main": "feedback-tool.ts",
-  "license": "MIT"
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "feedback",
+    "llm",
+    "model-context-protocol",
+    "ai"
+  ],
+  "author": "Brightwing Systems LLC",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "homepage": "https://patchworkmcp.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Brightwing-Systems-LLC/patchworkmcp-ts"
+  },
+  "bugs": {
+    "url": "https://github.com/Brightwing-Systems-LLC/patchworkmcp-ts/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.0",
+    "typescript": "^5.4"
+  }
 }
