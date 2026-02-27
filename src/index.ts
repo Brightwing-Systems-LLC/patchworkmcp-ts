@@ -1,4 +1,4 @@
-/** PatchworkMCP — Drop-in feedback tool for TypeScript MCP servers. */
+/** PatchworkMCP — Drop-in feedback tool and middleware for TypeScript MCP servers. */
 
 export {
   TOOL_NAME,
@@ -9,3 +9,10 @@ export {
 } from "./feedback-tool.js";
 
 export type { FeedbackToolOptions } from "./feedback-tool.js";
+
+export {
+  PatchworkMiddleware,
+  startMiddleware,
+} from "./middleware.js";
+
+export type { MiddlewareOptions } from "./middleware.js";
