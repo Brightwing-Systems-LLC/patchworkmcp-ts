@@ -1,5 +1,7 @@
 # PatchworkMCP - TypeScript SDK
 
+[![TypeScript](https://img.shields.io/badge/typescript-5.x-blue.svg)](https://www.typescriptlang.org/) [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE) [![MCPAmpel](https://img.shields.io/endpoint?url=https://mcpampel.com/badge/brightwing-systems-llc/patchworkmcp-ts.json)](https://mcpampel.com/repo/brightwing-systems-llc/patchworkmcp-ts)
+
 PatchworkMCP helps MCP server authors understand how agents actually use their servers — what works, what's missing, and what to build next. This SDK adds three things to your server:
 
 1. **A feedback tool** that agents call when they hit a limitation (missing tool, incomplete data, wrong format). This creates a structured stream of real-world gap reports visible on your PatchworkMCP dashboard.
